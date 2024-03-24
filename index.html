@@ -69,7 +69,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 <div id="content" class="w3-container">
 
-	<canvas id="canvas" width="200" height="100" style="border:1px solid black;">
+	<canvas id="canvas" width="300" height="150" style="border:1px solid black;">
 		<!--Sorry, your browser does not support canvas.-->
 	</canvas>
 
@@ -78,8 +78,12 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	//Find the canvas//
 	const ctx = canvas.getContext("2d");
 	//Gives tools necessary for drawing//
-	ctx.fillRect(35,35,50,50);
-	//Shows where the rectangle should be//	
+	ctx.lineWidth = "6";
+	//Sets the width of the line//
+	ctx.strokeStyle = "orange";
+	//Sets the color of the boundary line//
+	ctx.fillRect(5,5,290,140);
+	//Calls for a rectangle and shows where the rectangle should be//	
 	</script>
 
 
