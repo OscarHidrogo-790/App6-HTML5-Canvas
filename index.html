@@ -70,36 +70,77 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 <div id="content" class="w3-container">
 
 
-	<canvas id="canvas" width="300" height="150" style="border:1px solid black;">
-		<!--Creates new element which is the canvas-->
-	</canvas>
+<canvas id="canvas" width="300" height="300" style="border:1px solid black;">
+	<!--Creates new element which is the canvas-->
+</canvas>
 	
+<div>
 	<button onclick="drawRectangle()"class="w3-button w3-white w3-round w3-hover-green">Draw Rectangle</button>
 	<button onclick="writeName()"class="w3-button w3-white w3-round w3-hover-green">Write Name</button>
 	<button onclick="drawImage()" class="w3-button w3-white w3-round w3-hover-green">Draw Image</button>
 	<button onclick="clearCanvas()" class="w3-button w3-white w3-round w3-hover-green">Clear Canvas</button>
+</div>
 
 <script>
-	window.onload = function() {
-		
-	ctx.font="30px Times New Roman";
-	//Sets font and size of text//
-	ctx.fillStyle = "white";
-	//Sets color of text//
-	ctx.textAlign = "center";
-	//Sets the position of the text//
-	ctx.fillText("Oscar Hidrogo", canvas.width/2, canvas.height/2);
-	//Sets where exactly the text should be//
 
-	const img = new Image();
-	//Sets new variable, which is the image//
-	img.src = "https://s7d1.scene7.com/is/image/kdrp/DP_logo_oval_ellipse_202_cmyk?$Dynamic-PublicURL-PNG?wid=480&hei=480";
-	//Looks for the image//
-        img.onload = function() {
-	// Draw the Dr. Pepper logo on the canvas//
-        ctx.drawImage(img, 10, 10);
-	//Sets image dimensions
-	};
+		function drawRectangle() {
+		//Function to draw a rectangle//
+                const canvas = document.getElementById("canvas");
+		//Gets the canvas element//               
+                const ctx = canvas.getContext("2d");
+		//Gets the 2D rendering context. Draw in 2D pretty much is what is saying//
+                ctx.lineWidth = "6";
+		//Sets the width of the line//
+                ctx.strokeStyle = "orange";
+		//Sets the color of the boundary line//
+                ctx.strokeRect(5,5,290,290);
+		//Draws a rectangle on the canvas//
+	}
+
+		function writeName() {
+		//Function to write name on canvas//                
+                const canvas = document.getElementById("canvas");
+		//Gets the canvas element//
+                const ctx = canvas.getContext("2d");
+		//Gets the 2D rendering context//
+                ctx.font = "30px Times New Roman";
+		//Sets font and size of text//
+                ctx.fillStyle = "Black";
+		//Sets color of text//
+		ctx.textAlign = "center";
+		//Aligns text//
+                ctx.fillText("Oscar Hidrogo");
+		//Writes text on the canvas//
+	}
+		
+		function drawImage() {
+		//Function to draw an image on canvas//
+                const canvas = document.getElementById("canvas");
+		//Gets the canvas element//
+                const ctx = canvas.getContext("2d");
+		//Gets the 2D rendering context//
+                const img = new Image();
+		//Creates an image object//
+                img.crossOrigin = "anonymous"; 
+		//Ensures cross-origin image loading. Basically so it work on any device. That's what I understood at least.//
+                img.onload = function() {
+		//Function that loads the image//
+		ctx.drawImage(img, 5, 5, 290, 290);
+		//Draws the image on the canvas//
+		};
+                img.src = "https://s7d1.scene7.com/is/image/kdrp/DP_logo_oval_ellipse_202_cmyk?$Dynamic-PublicURL-PNG?wid=480&hei=480";
+		//Sets the image source//
+	}
+
+		function clearCanvas() {
+		//Function to clear the canvas//
+                const canvas = document.getElementById("canvas");
+		//Gets the canvas element//
+                const ctx = canvas.getContext("2d");
+		//Gets the 2D rendering context//
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+		//Clears the canvas//
+	}
 
 
 	
