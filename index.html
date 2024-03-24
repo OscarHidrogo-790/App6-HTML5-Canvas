@@ -81,9 +81,17 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	ctx.lineWidth = "6";
 	//Sets the width of the line//
 	ctx.strokeStyle = "orange";
-	//Sets the color of the boundary line//
+	//Draws on the canvas and sets the color of the boundary line//
 	ctx.fillRect(5,5,290,140);
 	//Calls for a rectangle and shows where the rectangle should be//	
+	ctx.font="30px Times New Roman";
+	//Sets font and size of text//
+	ctx.fillStyle = "white";
+	//Sets color of text//
+	ctx.textAlign = "center";
+	//Sets the position of the text//
+	ctx.fillText("Oscar Hidrogo", canvas.width/2, canvas.height/2);
+	//Sets where exactly the text should be
 	</script>
 
 
