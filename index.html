@@ -69,15 +69,18 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 <div id="content" class="w3-container">
 
+
 	<canvas id="canvas" width="300" height="150" style="border:1px solid black;">
-		<!--Sorry, your browser does not support canvas.-->
+		<!--Creates new element which is the canvas-->
 	</canvas>
 
-	<script>
+<script>
+	window.onload = function() {
+	//When the window load, execute this function//
 	const canvas = document.getElementById("canvas");
-	//Find the canvas//
+	//Find the canvas by its name//
 	const ctx = canvas.getContext("2d");
-	//Gives tools necessary for drawing//
+	//Gives tools necessary for 2D drawing//
 	ctx.lineWidth = "6";
 	//Sets the width of the line//
 	ctx.strokeStyle = "orange";
@@ -91,8 +94,18 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	ctx.textAlign = "center";
 	//Sets the position of the text//
 	ctx.fillText("Oscar Hidrogo", canvas.width/2, canvas.height/2);
-	//Sets where exactly the text should be
-	</script>
+	//Sets where exactly the text should be//
+
+	const img = new Image();
+	//Sets new variable, which is the image//
+	img.src = "https://s7d1.scene7.com/is/image/kdrp/DP_logo_oval_ellipse_202_cmyk?$Dynamic-PublicURL-PNG?wid=480&hei=480";
+	//Looks for the image//
+        img.onload = function() {
+	// Draw the Dr. Pepper logo on the canvas//
+        ctx.drawImage(img, 10, 10);
+	//Sets image dimensions
+	};
+</script>
 
 
 	<!--Added function to draw-->
