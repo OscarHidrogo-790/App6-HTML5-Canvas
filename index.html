@@ -68,8 +68,22 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 </div>
 	
 <div id="content" class="w3-container">
+
+	<canvas id="a" width="300" height="225"></canvas>
+
+		<!--Added function name for the canvas-->
 	
 	<canvas width="300" height="225"></canvas>
+	
+		<!--Canvas is being displayed here-->
+	
+	function draw_b() {
+  	var b_canvas = document.getElementById("b");
+  	var b_context = b_canvas.getContext("2d");
+  	b_context.fillRect(50, 25, 150, 100);
+	}
+
+	<!--Added function to draw-->
 
 	<p>Content goes here.</p>
 		
