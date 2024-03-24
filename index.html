@@ -73,20 +73,15 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<canvas id="canvas" width="300" height="150" style="border:1px solid black;">
 		<!--Creates new element which is the canvas-->
 	</canvas>
+	
+	<button onclick="drawRectangle()"class="w3-button w3-white w3-round w3-hover-green">Draw Rectangle</button>
+	<button onclick="writeName()"class="w3-button w3-white w3-round w3-hover-green">Write Name</button>
+	<button onclick="drawImage()" class="w3-button w3-white w3-round w3-hover-green">Draw Image</button>
+	<button onclick="clearCanvas()" class="w3-button w3-white w3-round w3-hover-green">Clear Canvas</button>
 
 <script>
 	window.onload = function() {
-	//When the window load, execute this function//
-	const canvas = document.getElementById("canvas");
-	//Find the canvas by its name//
-	const ctx = canvas.getContext("2d");
-	//Gives tools necessary for 2D drawing//
-	ctx.lineWidth = "6";
-	//Sets the width of the line//
-	ctx.strokeStyle = "orange";
-	//Draws on the canvas and sets the color of the boundary line//
-	ctx.fillRect(5,5,290,140);
-	//Calls for a rectangle and shows where the rectangle should be//	
+		
 	ctx.font="30px Times New Roman";
 	//Sets font and size of text//
 	ctx.fillStyle = "white";
@@ -105,6 +100,9 @@ console.log("This file last modified " + docMod); // generates message in javaSc
         ctx.drawImage(img, 10, 10);
 	//Sets image dimensions
 	};
+
+
+	
 </script>
 
 
