@@ -105,12 +105,12 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		//Gets the 2D rendering context//
                 ctx.font = "30px Times New Roman";
 		//Sets font and size of text//
-                ctx.fillStyle = "Black";
+                ctx.fillStyle = "black";
 		//Sets color of text//
 		ctx.textAlign = "center";
 		//Aligns text//
-                ctx.fillText("Oscar Hidrogo");
-		//Writes text on the canvas//
+                ctx.fillText("Oscar Hidrogo", canvas.width / 2, canvas.height / 2);
+		//Writes text on the canvas at the center//
 	}
 		
 		function drawImage() {
