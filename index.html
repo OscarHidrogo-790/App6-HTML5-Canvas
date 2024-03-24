@@ -69,15 +69,18 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 <div id="content" class="w3-container">
 
-	<canvas id="a" width="300" height="225"></canvas>
+	<canvas id="myCanvas" width="200" height="100" style="border:1px solid black;">
+		<!--Sorry, your browser does not support canvas.-->
+	</canvas>
 
-		<!--Added function and name for the canvas-->
-	
-	function draw_b() {
-  var b_canvas = document.getElementById("b");
-  var b_context = b_canvas.getContext("2d");
-  b_context.fillRect(50, 25, 150, 100);
-}
+	<script>
+	const canvas = document.getElementById("myCanvas");
+	<!-- Find the canvas-->
+	const ctx = canvas.getContext("2d");
+	<!--Gives tools necessary for drawing-->
+	ctx.fillRect(0,0,150,75);
+	</script>
+
 
 	<!--Added function to draw-->
 
